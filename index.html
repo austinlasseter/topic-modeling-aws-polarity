@@ -43,11 +43,34 @@
                   onsubmit="return submitForm(this);" >                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
                 <div class="form-group">
                     <label for="review">Enter your text here (example provided):</label>
-                    <textarea class="form-control"  rows="5" id="review">Walter Perry Johnson (November 6, 1887 – December 10, 1946), nicknamed "Barney" and "The Big Train", was a Major League Baseball right-handed pitcher. He played his entire 21-year baseball career for the Washington Senators. Often thought of as one of the greatest pitchers in baseball history, Johnson established several pitching records, some of which remain unbroken nine decades after he retired from baseball. He remains by far the all-time career leader in shutouts with 110, second in wins with 417, and fourth in complete games with 531. He held the career record in strikeouts for nearly 56 years, with 3,508, from the end of his career in 1927 until the 1983 season.</textarea>
+                    <textarea class="form-control"  rows="5" id="review">So happy and crazy! Loved the yellow, red and gold sunshine and rainbows. During the great and wonderful period of outside historical software, a good and delightful program role was often related to the role of minor software programmer. This was fun, exciting, and really the best. A cheerful programmer will use a beautiful mouse to program minor roles. Loved it! Fortunately, this results in an sweet and happy memory wall and is related to the cold war. It's fun and yellow. Everyone wants to see that. She's crazy and fun!</textarea>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <h1 class="bg-success" id="result"></h1>
+
+
+            <h3>Topic Classifier for Positive Sentiment:</h3>
+            <ul>
+              <li>train_accuracy: 0.6062</li>
+              <li>Number of train examples: 20000</li>
+              <li>validation_accuracy: 0.58</li>
+              <li>Number of validation examples: 5000</li>
+            </ul>
+            <p>Top Words associated with each Positive Topic:</p>
+            <ul>
+              <li>Topic 1: 'cold', 'memory', 'program', 'mouse', 'shes', 'period', 'crazy', 'minor', 'relate', 'wall', 'historical', 'software', 'war', 'outside', 'role'</li>
+              <li>Topic 2: 'condition', 'arrived', 'product', 'amazon', 'expected', 'service', 'order', 'delivery', 'ordered', 'quickly', 'price', 'came', 'great', 'headphones', 'exactly'</li>
+              <li>Topic 3: 'book', 'information', 'great', 'informative', 'helpful', 'easy', 'guide', 'questions', 'useful', 'reference', 'text', 'good', 'excellent', 'recommend', 'read'</li>
+              <li>Topic 4: 'movie', 'film', 'dvd', 'movies', 'watch', 'great', 'season', 'series', 'seen', 'watching', 'good', 'best', 'love', 'acting', 'tv'</li>
+              <li>Topic 5: 'book', 'read', 'books', 'story', 'reading', 'life', 'characters', 'great', 'good', 'author', 'written', 'like', 'time', 'really', 'people'</li>
+              <li>Topic 6: 'video', 'workout', 'everyday', 'speakers', 'white', 'tape', 'ok', 'gone', 'videos', 'green', 'body', 'hooked', 'black', 'blue', 'rich'</li>
+              <li>Topic 7: 'cd', 'album', 'music', 'songs', 'song', 'like', 'great', 'best', 'love', 'good', 'listen', 'just', 'band', 'rock', 'heard'</li>
+              <li>Topic 8: 'la', 'que', 'el', 'master', 'performances', 'plenty', 'typical', 'enjoyable', 'production', 'cast', 'brilliant', 'super', 'living', 'added', 'sets'</li>
+              <li>Topic 9: 'use', 'great', 'product', 'good', 'just', 'easy', 'price', 'like', 'works', 'bought', 'nice', 'little', 'used', 'time', 'really'</li>
+              <li>Topic 10: 'game', 'book', 'movie', 'love', 'old', 'great', 'fun', 'story', 'really', 'like', 'kids', 'loves', 'good', 'year', 'loved'</li>
+            </ul>
+
             <h3>Topic Classifier for Negative Sentiment:</h3>
             <ul>
               <li>train_accuracy: 0.6071</li>
@@ -67,29 +90,6 @@
               <li>Topic 8: 'movie', 'film', 'watch', 'movies', 'dvd', 'bad', 'just', 'like', 'acting', 'time', 'good', 'really', 'watching', 'dont', 'story'</li>
               <li>Topic 9: 'book', 'read', 'story', 'books', 'characters', 'like', 'reading', 'just', 'author', 'written', 'writing', 'really', 'plot', 'good', 'time'</li>
               <li>Topic 10: 'children', 'child', 'country', 'parents', 'wants', 'modern', 'american', 'market', 'thank', 'wife', 'accurate', 'include', 'war', 'history', 'man'</li>
-            </ul>
-
-
-
-            <h3>Topic Classifier for Positive Sentiment:</h3>
-            <ul>
-              <li>train_accuracy: 0.6071</li>
-              <li>Number of train examples: 20000</li>
-              <li>validation_accuracy: 0.5794</li>
-              <li>Number of validation examples: 5000</li>
-            </ul>
-            <p>Top Words associated with each Positive Topic:</p>
-            <ul>
-              <li>Topic 1: 'cold', 'memory', 'program', 'mouse', 'shes', 'period', 'crazy', 'minor', 'relate', 'wall', 'historical', 'software', 'war', 'outside', 'role'</li>
-              <li>Topic 2: 'condition', 'arrived', 'product', 'amazon', 'expected', 'service', 'order', 'delivery', 'ordered', 'quickly', 'price', 'came', 'great', 'headphones', 'exactly'</li>
-              <li>Topic 3: 'book', 'information', 'great', 'informative', 'helpful', 'easy', 'guide', 'questions', 'useful', 'reference', 'text', 'good', 'excellent', 'recommend', 'read'</li>
-              <li>Topic 4: 'movie', 'film', 'dvd', 'movies', 'watch', 'great', 'season', 'series', 'seen', 'watching', 'good', 'best', 'love', 'acting', 'tv'</li>
-              <li>Topic 5: 'book', 'read', 'books', 'story', 'reading', 'life', 'characters', 'great', 'good', 'author', 'written', 'like', 'time', 'really', 'people'</li>
-              <li>Topic 6: 'video', 'workout', 'everyday', 'speakers', 'white', 'tape', 'ok', 'gone', 'videos', 'green', 'body', 'hooked', 'black', 'blue', 'rich'</li>
-              <li>Topic 7: 'cd', 'album', 'music', 'songs', 'song', 'like', 'great', 'best', 'love', 'good', 'listen', 'just', 'band', 'rock', 'heard'</li>
-              <li>Topic 8: 'la', 'que', 'el', 'master', 'performances', 'plenty', 'typical', 'enjoyable', 'production', 'cast', 'brilliant', 'super', 'living', 'added', 'sets'</li>
-              <li>Topic 9: 'use', 'great', 'product', 'good', 'just', 'easy', 'price', 'like', 'works', 'bought', 'nice', 'little', 'used', 'time', 'really'</li>
-              <li>Topic 10: 'game', 'book', 'movie', 'love', 'old', 'great', 'fun', 'story', 'really', 'like', 'kids', 'loves', 'good', 'year', 'loved'</li>
             </ul>
 
 
