@@ -42,15 +42,15 @@ def lambda_handler(event, context):
         subprob = output[0]['prob'][0]*100
         topic = output[0]['label'][0].split('__label__')[1]   
         output = 'Prediction: NEGATIVE sentiment with probability {:.1f}%, Topic {} with probability {:.1f}%'.format(prob, topic, subprob)
-#     elif label=='1:
-#         response = runtime.invoke_endpoint(EndpointName = 'blazingtext-2020-08-13-16-48-57-681',
-#                                           ContentType = 'application/json',                 
-#                                           Body = json.dumps(payload))
+    elif label=='1':
+        response = runtime.invoke_endpoint(EndpointName = 'blazingtext-2020-08-13-20-36-38-040',
+                                          ContentType = 'application/json',                 
+                                          Body = json.dumps(payload))
 
-#         output = json.loads(response['Body'].read().decode('utf-8'))    
-#         subprob = output[0]['prob'][0]*100
-#         topic = output[0]['label'][0].split('__label__')[1]   
-#         output = 'Prediction: POSITIVE sentiment with probability {:.1f}%, Topic {} with probability {:.1f}%'.format(prob, topic, subprob)
+        output = json.loads(response['Body'].read().decode('utf-8'))    
+        subprob = output[0]['prob'][0]*100
+        topic = output[0]['label'][0].split('__label__')[1]   
+        output = 'Prediction: POSITIVE sentiment with probability {:.1f}%, Topic {} with probability {:.1f}%'.format(prob, topic, subprob)
     else:
         output = 'Error occurred'
     
