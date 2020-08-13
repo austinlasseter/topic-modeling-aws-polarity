@@ -26,7 +26,7 @@ Note: I was running out of time so I took a small subset of the total dataset, i
 * file: LDA_scikitlearn.ipynb
 
 ## Step 3: Multi-label Classification
-I built to multi-label classifiers, one for the positive reviews and one of the negative reviews. I used the topics from the previous step to train my data. Again, because I was running out of time, I reduced the size of my data even further, and kept only 25,000 for each sentiment. Of these, 20K were training and 5K for validation. This small data size really killed the accuracy of my model: with more time, I'd go back and retrain with all the data.
+I built two multi-label classifiers, one for the positive reviews and one of the negative reviews. I used the topics from the previous step to train my data. Again, because I was running out of time, I reduced the size of my data even further, and kept only 25,000 for each sentiment. Of these, 20K were training and 5K for validation. This small data size really killed the accuracy of my model: with more time, I'd go back and retrain with all the data.
 * file: topic_classifier.ipynb
 
 **Positive Sentiment**
