@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BlazingText!</title>
+        <meta charset="utf-8">
+        <meta name="viewport"  content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script>
+         "use strict";
+         function submitForm(oFormElement) {
+             var xhr = new XMLHttpRequest();
+             xhr.onload = function() {
+                 var result = parseFloat(xhr.responseText);
+                 var resultElement = document.getElementById('result');
+                 if (result == 0) {
+                     resultElement.className = 'bg-danger';
+                     resultElement.innerHTML = 'Your review was NEGATIVE!';
+                 } else {
+                     resultElement.className = 'bg-success';
+                     resultElement.innerHTML = xhr.responseText;
+                 }
+             }
+             xhr.open (oFormElement.method, oFormElement.action, true);
+             var review = document.getElementById('review');
+             xhr.send (review.value);
+             return false;
+         }
+        </script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Text Classification Engine</h1>
+            <p>Enter any text and see it classifed as one of the following 14 topics:</p>
+            <div style="float: left; width: 50%;">
+            <ul>
+              <li>Company</li>
+              <li>Educational Institution</li>
+              <li>Artist</li>
+              <li>Athlete</li>
+              <li>Office Holder</li>
+              <li>Means of Transportation</li>
+              <li>Building</li>
+            </ul>
+            </div>
+            <div style="float: right; width: 50%;">
+            <ul>
+              <li>Natural Place</li>
+              <li>Village</li>
+              <li>Animal</li>
+              <li>Plant</li>
+              <li>Album</li>
+              <li>Film</li>
+              <li>Written Work</li>
+            </ul>
+            </div>
+
+
+            <form method="POST"
+                  action="https://t0ejkafadc.execute-api.us-east-1.amazonaws.com/prodd"
+                  onsubmit="return submitForm(this);" >                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+                <div class="form-group">
+                    <label for="review">Enter your text here (example provided):</label>
+                    <textarea class="form-control"  rows="5" id="review">Walter Perry Johnson (November 6, 1887 – December 10, 1946), nicknamed "Barney" and "The Big Train", was a Major League Baseball right-handed pitcher. He played his entire 21-year baseball career for the Washington Senators. Often thought of as one of the greatest pitchers in baseball history, Johnson established several pitching records, some of which remain unbroken nine decades after he retired from baseball. He remains by far the all-time career leader in shutouts with 110, second in wins with 417, and fourth in complete games with 531. He held the career record in strikeouts for nearly 56 years, with 3,508, from the end of his career in 1927 until the 1983 season.</textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <h1 class="bg-success" id="result"></h1>
+
+            <p align="right">
+            <a href="https://medium.com/@austinlasseter/deploy-an-nlp-classification-model-with-amazon-sagemaker-and-lambda-cd5ea6339781?sk=13ebb4a4a57844933e2a89ad04975017">Read more about how I deployed this model</a>
+            </p>
+            <p align="right">
+            <a href="https://github.com/austinlasseter/topic-modeling-aws-polarity">Code on github</a>
+            </p>
+            <p align="right">
+            <a href="https://www.linkedin.com/in/austinlasseter/">About me</a>
+            </p>
+        </div>
+    </body>
+</html>
