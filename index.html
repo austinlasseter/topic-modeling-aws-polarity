@@ -35,33 +35,11 @@
 
         <div class="container">
             <h1>Text Classification Engine</h1>
-            <p>Enter any text and see it classifed as one of the following 14 topics:</p>
-            <div style="float: left; width: 50%;">
-            <ul>
-              <li>Company</li>
-              <li>Educational Institution</li>
-              <li>Artist</li>
-              <li>Athlete</li>
-              <li>Office Holder</li>
-              <li>Means of Transportation</li>
-              <li>Building</li>
-            </ul>
-            </div>
-            <div style="float: right; width: 50%;">
-            <ul>
-              <li>Natural Place</li>
-              <li>Village</li>
-              <li>Animal</li>
-              <li>Plant</li>
-              <li>Album</li>
-              <li>Film</li>
-              <li>Written Work</li>
-            </ul>
-            </div>
+            <p>Enter any text and see it classifed by positive or negative sentiment</p>
 
 
             <form method="POST"
-                  action="https://t0ejkafadc.execute-api.us-east-1.amazonaws.com/prodd"
+                  action="https://t0ejkafadc.execute-api.us-east-1.amazonaws.com/prod"
                   onsubmit="return submitForm(this);" >                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
                 <div class="form-group">
                     <label for="review">Enter your text here (example provided):</label>
@@ -70,6 +48,50 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <h1 class="bg-success" id="result"></h1>
+            <h3>Topic Classifier for Negative Sentiment:</h3>
+            <ul>
+              <li>train_accuracy: 0.6071</li>
+              <li>Number of train examples: 20000</li>
+              <li>validation_accuracy: 0.5794</li>
+              <li>Number of validation examples: 5000</li>
+            </ul>
+            <p>Top Words associated with each Negative Topic:</p>
+            <ul>
+              <li>Topic 1: 'book', 'information', 'books', 'author', 'read', 'guide', 'edition', 'useful', 'errors', 'good', 'text', 'learn', 'does', 'pages', 'written'</li>
+              <li>Topic 2: 'cd', 'album', 'music', 'songs', 'like', 'song', 'sound', 'bayournd', 'just', 'good', 'listen', 'sounds', 'dont', 'rock', 'voice'</li>
+              <li>Topic 3: 'product', 'work', 'use', 'like', 'does', 'software', 'windows', 'bought', 'program', 'did', 'tried', 'buy', 'dont', 'just', 'good'</li>
+              <li>Topic 4: 'game', 'games', 'play', 'video', 'toy', 'dont', 'money', 'fun', 'like', 'graphics', 'just', 'playing', 'really', 'kids', 'buy'</li>
+              <li>Topic 5: 'amazon', 'product', 'received', 'item', 'ordered', 'phone', 'sent', 'return', 'order', 'service', 'dvd', 'work', 'did', 'buy', 'refund'</li>
+              <li>Topic 6: 'kindle', 'hair', 'points', 'rate', 'sleep', 'eyes', 'guys', 'michael', 'face', 'guy', 'sold', 'people', 'lines', 'skin', 'body'</li>
+              <li>Topic 7: 'product', 'use', 'bought', 'just', 'months', 'used', 'buy', 'time', 'work', 'plastic', 'like', 'good', 'dont', 'got', 'broke'</li>
+              <li>Topic 8: 'movie', 'film', 'watch', 'movies', 'dvd', 'bad', 'just', 'like', 'acting', 'time', 'good', 'really', 'watching', 'dont', 'story'</li>
+              <li>Topic 9: 'book', 'read', 'story', 'books', 'characters', 'like', 'reading', 'just', 'author', 'written', 'writing', 'really', 'plot', 'good', 'time'</li>
+              <li>Topic 10: 'children', 'child', 'country', 'parents', 'wants', 'modern', 'american', 'market', 'thank', 'wife', 'accurate', 'include', 'war', 'history', 'man'</li>
+            </ul>
+
+
+
+            <h3>Topic Classifier for Positive Sentiment:</h3>
+            <ul>
+              <li>train_accuracy: 0.6071</li>
+              <li>Number of train examples: 20000</li>
+              <li>validation_accuracy: 0.5794</li>
+              <li>Number of validation examples: 5000</li>
+            </ul>
+            <p>Top Words associated with each Positive Topic:</p>
+            <ul>
+              <li>Topic 1: 'cold', 'memory', 'program', 'mouse', 'shes', 'period', 'crazy', 'minor', 'relate', 'wall', 'historical', 'software', 'war', 'outside', 'role'</li>
+              <li>Topic 2: 'condition', 'arrived', 'product', 'amazon', 'expected', 'service', 'order', 'delivery', 'ordered', 'quickly', 'price', 'came', 'great', 'headphones', 'exactly'</li>
+              <li>Topic 3: 'book', 'information', 'great', 'informative', 'helpful', 'easy', 'guide', 'questions', 'useful', 'reference', 'text', 'good', 'excellent', 'recommend', 'read'</li>
+              <li>Topic 4: 'movie', 'film', 'dvd', 'movies', 'watch', 'great', 'season', 'series', 'seen', 'watching', 'good', 'best', 'love', 'acting', 'tv'</li>
+              <li>Topic 5: 'book', 'read', 'books', 'story', 'reading', 'life', 'characters', 'great', 'good', 'author', 'written', 'like', 'time', 'really', 'people'</li>
+              <li>Topic 6: 'video', 'workout', 'everyday', 'speakers', 'white', 'tape', 'ok', 'gone', 'videos', 'green', 'body', 'hooked', 'black', 'blue', 'rich'</li>
+              <li>Topic 7: 'cd', 'album', 'music', 'songs', 'song', 'like', 'great', 'best', 'love', 'good', 'listen', 'just', 'band', 'rock', 'heard'</li>
+              <li>Topic 8: 'la', 'que', 'el', 'master', 'performances', 'plenty', 'typical', 'enjoyable', 'production', 'cast', 'brilliant', 'super', 'living', 'added', 'sets'</li>
+              <li>Topic 9: 'use', 'great', 'product', 'good', 'just', 'easy', 'price', 'like', 'works', 'bought', 'nice', 'little', 'used', 'time', 'really'</li>
+              <li>Topic 10: 'game', 'book', 'movie', 'love', 'old', 'great', 'fun', 'story', 'really', 'like', 'kids', 'loves', 'good', 'year', 'loved'</li>
+            </ul>
+
 
             <p align="right">
             <a href="https://medium.com/@austinlasseter/deploy-an-nlp-classification-model-with-amazon-sagemaker-and-lambda-cd5ea6339781?sk=13ebb4a4a57844933e2a89ad04975017">Read more about how I deployed this model</a>
