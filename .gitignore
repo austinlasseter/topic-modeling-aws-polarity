@@ -1,5 +1,6 @@
 *.csv
 *.train
+*.validation
 *.test
 
 # Byte-compiled / optimized / DLL files
